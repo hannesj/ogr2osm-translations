@@ -1,0 +1,65 @@
+building 	school 	ammatilliset oppilaitokset
+amenity 	school 	ammatilliset oppilaitokset
+building 	apartments 	asuntolat, vanhusten palvelutalot, asuntolahotelli
+amenity 	social_facility 	asuntolat, vanhusten palvelutalot, asuntolahotelli
+FIXME 	or hotel ("asuntolahotelli") instead of social_facility (unlikely)? 	asuntolat, vanhusten palvelutalot, asuntolahotelli
+building 	hotel 	hotellit, motellit, matkustajakodit, kylpylähotell
+tourism 	hotel 	hotellit, motellit, matkustajakodit, kylpylähotell
+FIXME 	hostel? 	hotellit, motellit, matkustajakodit, kylpylähotell
+building 	public 	jäähallit
+leisure 	sports_centre 	jäähallit
+sport 	ice_skating 	jäähallit
+building 	duplex 	kahden asunnon talot
+building 	greenhouse 	kasvihuoneet
+building 	warehouse 	kauppavarastot
+amenity 	social_facility 	kehitysvammaisten hoitolaitokset
+social_facility:for 	disabled 	kehitysvammaisten hoitolaitokset
+buidling 	hospital 	keskussairaalat
+amenity 	hospital 	keskussairaalat
+building 	residential? 	ketjutalot
+building 	public 	kirjastot
+amenity 	library 	kirjastot
+amenity 	place_of_worship 	kirkot, kappelit, luostarit, rukoushuoneet
+building 	university 	korkeakoulurakennukset
+amenity 	university 	korkeakoulurakennukset
+building 	garage/depot? 	kulkuneuvojen suoja- ja huoltorakennukset
+amenity 	social_facility 	lastenkodit, koulukodit
+FIXME 	social_facility:for=kids/juvenile? 	lastenkodit, koulukodit
+amenity 	kindergarten 	lasten päiväkodit
+building 	retail 	liike- ja tavaratalot, kauppakeskukset
+building 	apartments 	luhtitalot
+leisure 	sports_centre 	monitoimi- ja muut urheiluhallit
+tourism 	museum 	museot, taidegalleriat
+building 	apartments 	muut kerrostalot
+building 	industrial? 	muut teollisuuden tuotantorakennukset
+building 	warehouse 	muut varastorakennukset
+building 	retail 	myymälähallit
+building 	retail 	myymälärakennukset
+building 	barn/cowshed? 	navetat, sikalat, kanalat yms.
+amenity 	exhibition_centre? 	näyttelyhallit
+amenity 	fire_station 	paloasemat
+amenity 	school 	peruskoulut, lukiot ja muut
+amenity 	parking 	pysäköintitalot
+building 	transportation 	rautatie- ja linja-autoasemat, lento- ja satamater
+FIXME 	restaurant/fast_food/cafe/bar? 	ravintolat, ruokalat ja baarit
+building 	terrace 	rivitalot
+amenity 	sauna 	saunarakennukset
+amenity 	place_of_worship 	seurakuntatalot
+building 	industrial 	teollisuushallit
+building 	industrial 	teollisuus- ja pienteollisuustalot
+building 	warehouse 	teollisuusvarastot
+amenity 	hospital 	terveyskeskukset
+building 	utility 	tietoliikenteen rakennukset
+building 	commercial 	toimistorakennukset
+office 	yes 	toimistorakennukset
+building 	public 	uimahallit
+leisure 	sports_centre 	uimahallit
+sport 	swimming 	uimahallit
+amenity 	shelter? 	väestönsuojat
+amenity 	social_facility 	vanhainkodit
+social_facility 	group_home 	vanhainkodit
+social_facility:for 	senior 	vanhainkodit
+amenity 	prison 	vankilat
+building 	barn? 	viljankuivaamot ja viljan säilytysrakennukset, sii
+building 	house 	yhden asunnon talot
+building 	utility 	yhdyskuntatekniikan rakennukset
