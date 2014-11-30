@@ -3,15 +3,15 @@
 '''
 Import translations for Finnish buildings
 '''
-import csv
+import unicodecsv as csv
 import logging
 
 BUILDING_TAGS = []
 
-with open('translations/vantaa.csv', 'r') as csvfile:
+with open('translations/finland.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
     for row in reader:
-        BUILDING_TAGS.append((row[2].decode('utf-8'), row[0].strip(), row[1].strip()))
+        BUILDING_TAGS.append((int(row[0]), row[3].strip(), row[4].strip()))
 
 materials = {
     "Betoni":"concrete",
@@ -36,16 +36,16 @@ def filterTags(attrs):
     if attrs['valmistumispvm']:
         d,m,y = attrs['valmistumispvm'].split('.')
         if y != "1900": 
-            if (m != "12" or d != "31") and (m != "1" or d != "1"):
+            if (m != "12" or d != "31") and (m != "01" or d != "01"):
                 datestr = '-'.join((y,m.zfill(2),d.zfill(2)))
             else:
                 datestr = y    
             tags.update({'start_date':datestr})
 
-    if attrs[u'käyttötarkoitus']:
+    if attrs[u'käyttötarkoitus_koodi']:
         match = False
         for tag in BUILDING_TAGS:
-            if tag[0] == attrs[u'käyttötarkoitus']:
+            if tag[0] == int(attrs[u'käyttötarkoitus_koodi']):
                 tags.update({tag[1]:tag[2]})
                 match = True
         if match == False:
