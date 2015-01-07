@@ -11,7 +11,8 @@ BUILDING_TAGS = []
 with open('translations/finland.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
     for row in reader:
-        BUILDING_TAGS.append((int(row[0]), row[3].strip(), row[4].strip()))
+        if row[5].strip() != 'X':
+            BUILDING_TAGS.append((int(row[0]), row[3].strip(), row[4].strip()))
 
 LOG = logging.getLogger("espoo")
 

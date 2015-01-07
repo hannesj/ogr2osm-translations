@@ -11,7 +11,8 @@ BUILDING_TAGS = []
 with open('translations/finland.csv', 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
     for row in reader:
-        BUILDING_TAGS.append((int(row[0]), row[3].strip(), row[4].strip()))
+        if row[5].strip() != 'X':
+            BUILDING_TAGS.append((int(row[0]), row[3].strip(), row[4].strip()))
 
 materials = {
     "Betoni":"concrete",
@@ -62,7 +63,7 @@ def filterTags(attrs):
         tags.update({'building:levels':attrs['kerrostenlkm']})
 
     if attrs['asuntoja'] and attrs['asuntoja'] != "-9999" and attrs['asuntoja'] != "0":
-        tags.update({'flats':attrs['asuntoja']})
+        tags.update({'building:flats':attrs['asuntoja']})
 
     if attrs['katuosoite_suomeksi'] and attrs['katuosoite_suomeksi'] != '0 0':
         street, number = attrs['katuosoite_suomeksi'].rsplit(" ", 1)
@@ -73,5 +74,6 @@ def filterTags(attrs):
 
     if attrs['postitoimipaikka'] and attrs['postitoimipaikka'] != '0':
         tags.update({'addr:postcode':attrs['postitoimipaikka']})
+        tags.update({'addr:city':'Vantaa'})        
 
     return tags
