@@ -1,119 +1,216 @@
-011 	Yhden asunnon talot 	One-dwelling houses 	building 	house 	17768 	20248
-012 	Kahden asunnon talot 	Two-dwelling houses 	building 	duplex 	4084 	6462
-013 	Muut erilliset pientalot 	Other detached and semi-detached houses 	building 	house 	93 	40
-021 	Rivitalot 	Rowhouses 	building 	terrace 	3014 	3824
-022 	Ketjutalot 	Terraced houses 	building 	residential 	73 	104
-032 	Luhtitalot 	Balcony-access blocks 	building 	apartments 	105 	149
-039 	Muut asuinkerrostalot 	Other blocks of flats 	building 	apartments 	2313 	2719
-041 	Vapaa-ajan asuinrakennukset 	Free-time residential buildings 	building 	cabin 	366 	1819
-111 	Myymälähallit 	Shopping halls 	building 	retail 	19 	16
-112 	Liike- ja tavaratalot, kauppakeskukset 	Shops, department stores and shopping centres 	building 	retail 	101 	124
-112 			FIXME 	Likely also either shop=shopping_centre ("kauppakeskus" - with covered and warm space) or shop=mall ("ostoskeskus"/"ostari" - without warms connection space, possibly covered though). 		
-119 	Muut myymälärakennukset 	Other wholesale and retail trade buildings 	building 	retail 	97 	158
-121 	Hotellit yms. 	Hotels, etc. 	building 	hotel 	7 	17
-121 			tourism 	hotel 		
-121 			FIXME 	or hostel/guest_house/spa/spa_resort? 		
-123 	Loma-, lepo- ja virkistyskodit 	Holiday, rest and recreation homes 	building 	hotel 	0 	4
-123 			tourism 	hotel 		
-123 			FIXME 	hostel/guest_house? 		
-124 	Vuokrattavat lomamökit ja -osakkeet 	Rental holiday cottages and flats 	tourism 	chalet 	0 	77
-124 			FIXME 	tourism=apartment? 		
-129 	Muut majoitusliikerakennukset 	Other hotel buildings 	FIXME 	tourism=hotel/hostel/guest_house? 	0 	7
-131 	Asuntolat yms. 	Residences for communities, etc. 	building 	apartments 	15 	49
-131 			amenity 	social_facility 		
-131 			FIXME 	or hotel ("asuntolahotelli") instead of social_facility (possible but unlikely)? 		
-139 	Muut asuntolarakennukset 	Other residential buildings for communities 	building 	residential 	10 	32
-139 			FIXME 	amenity=? 		
-141 	Ravintolat yms. 	Restaurants and other similar buildings 	FIXME 	restaurant/fast_food/cafe/bar? 	16 	34
-151 	Toimistorakennukset 	Office buildings 	building 	commercial 	206 	383
-151 			office 	yes 		
-161 	Rautatie- ja linja-autoasemat, lento- ja satamaterminaalit 	Rail and bus stations, air and harbour terminals 	building 	transportation 	13 	7
-161 			FIXME 	or train_station? or amenity=bus_station? or aeroway=terminal? 		
-162 	Kulkuneuvojen suoja- ja huoltorakennukset 	Vehicle depots and service buildings 	FIXME 	garage/depot/car_repair/car_inspection 	357 	446
-163 	Pysäköintitalot 	Car parks 	amenity 	parking 	47 	123
-164 	Tietoliikenteen rakennukset 	Communications buildings 	building 	utility 	14 	61
-169 	Muut liikenteen rakennukset 	Other transport and communications buildings 	building 	transportation 	30 	8
-211 	Keskussairaalat 	General hospitals 	building 	hospital 	2 	0
-211 			amenity 	hospital 		
-213 	Muut sairaalat 	Other hospitals 	building 	hospital 	0 	11
-213 			amenity 	hospital 		
-214 	Terveyskeskukset 	Health centres 	building 	hospital 	4 	19
-214 			amenity 	hospital 		
-215 	Terveydenhuollon erityislaitokset 	Specialised health care buildings 	building 	hospital 	0 	4
-215 			amenity 	hospital 		
-219 	Muut terveydenhuoltorakennukset 	Other health care buildings 	building 	hospital 	8 	9
-219 			amenity 	hospital 		
-221 	Vanhainkodit 	Old-age homes 	amenity 	social_facility 	11 	22
-221 			social_facility 	group_home 		
-221 			social_facility:for 	senior 		
-222 	Lasten- ja koulukodit 	Children's homes, reform schools 	amenity 	social_facility 	10 	11
-222 			FIXME 	social_facility:for=kids/juvenile? 		
-223 	Kehitysvammaisten hoitolaitokset 	Nursing homes for the mentally retarded 	amenity 	social_facility 	5 	14
-223 			social_facility:for 	disabled 		
-229 	Muut huoltolaitosrakennukset 	Other social welfare buildings 	amenity 	social_facility 	9 	7
-299 			FIXME 	social_facility:for=? 		
-231 	Lasten päiväkodit 	Children's day care centres 	amenity 	kindergarten 	116 	168
-239 	Muualla luokittelemattomat sosiaalitoimen rakennukset 	Social service buildings n.e.c. 	amenity 	social_facility 	16 	47
-241 	Vankilat 	Prisons 	amenity 	prison 	2 	0
-311 	Teatterit, ooppera-, konsertti- ja kongressitalot 	Theatres, opera houses, concert halls and congress centres 	FIXME 	amenity=theatre? theatre:genre:speech=yes? or theatre:genre:opera=yes? or amenity=conference_centre? or amenity=arts_centre? 	0 	3
-312 	Elokuvateatterit 	Cinema halls 	amenity 	cinema 	0 	2
-322 	Kirjastot ja arkistot 	Libraries and archives 	building 	public 	3 	5
-322 			amenity 	library 		
-323 	Museot ja taidegalleriat 	Museums and art galleries 	tourism 	museum 	6 	15
-323 			FIXME 	or tourism=gallery? 		
-324 	Näyttelyhallit 	Exhibition halls 	amenity 	exhibition_centre 	4 	1
-331 	Seura- ja kerhorakennukset yms. 	Association and club buildings, etc. 	amenity 	social_facilty 	21 	36
-331 			FIXME 	"nuorisotalo" => social_facility:for=juvenile 		
-341 	Kirkot, kappelit, luostarit ja rukoushuoneet 	Churches, chapels, monasteries, convents and prayerhouses 	amenity 	place_of_worship 	24 	28
-341 			FIXME 	building=chucrch/chapel/monastery/mosque/other place of worship? 		
-342 	Seurakuntatalot 	Parish halls 	amenity 	place_of_worship 	12 	17
-349 	Muut uskonnollisten yhteisöjen rakennukset 	Other buildings of religious communities 	amenity 	place_of_worship 	3 	4
-351 	Jäähallit 	Indoor ice rinks 	building 	public 	3 	8
-351 			leisure 	sports_centre 		
-351 			sport 	ice_skating 		
-352 	Uimahallit 	Indoor swimming pools 	building 	public 	3 	4
-352 			leisure 	sports_centre 		
-352 			sport 	swimming 		
-353 	Tennis-, squash- ja sulkapallohallit 	Indoor tennis, squash and badminton courts 	building 	public 	0 	2
-353 			leisure 	sports_centre 		
-353 			FIXME 	sport=tennis/squash/badminton? 		
-354 	Monitoimihallit ja muut urheiluhallit 	Gymnasia and other sports halls 	leisure 	sports_centre 	11 	28
-354 			FIXME 	sport=? 		
-359 	Muut urheilu- ja kuntoilurakennukset 	Other buildings for sports and physical exercise 	leisure 	sports_centre 	24 	59
-359 			FIXME 	sport=? 		
-369 	Muut kokoontumisrakennukset 	Other assembly buildings 	FIXME 	leisure=? 	44 	67
-511 	Yleissivistävien oppilaitosten rakennukset 	General education buildings 	building 	school 	117 	163
-511 			amenity 	school 		
-511 			FIXME 	isced:level=? "ala-aste"=>1, "ylä-aste"=>2, "lukio"=>3 		
-521 	Ammatillisten oppilaitosten rakennukset 	Vocational education buildings 	building 	school 	15 	25
-521 			amenity 	school 		
-521 			FIXME 	isced:level=? "ammattikoulu"=>3, "erityisammattioppilaitos"=>4 		
-531 	Korkeakoulurakennukset 	University buildings 	building 	university 	1 	15
-531 			isced:level 	5 		
-532 	Tutkimuslaitosrakennukset 	Research institute buildings 	FIXME 	building=university? 	5 	38
-541 	Järjestöjen, liittojen, työnantajien yms. opetusrakennukset 	Educational buildings of organisations, unions, employers, etc. 	FIXME 	amenity=? 	2 	1
-549 	Muualla luokittelemattomat opetusrakennukset 	Educational buildings n.e.c. 	fixme 	building=school? amenity=? 	0 	3
-611 	Voimalaitosrakennukset 	Power stations 	FIXME 	power=? building=transformer_tower? 	46 	415
-613 	Yhdyskuntatekniikan rakennukset 	Public utility buildings 	FIXME 	building=utility? 	31 	109
-691 	Teollisuushallit 	Manufacturing plants 	building 	industrial 	69 	65
-692 	Teollisuus- ja pienteollisuustalot 	Workshops for industry and small-scale industry 	building 	industrial 	175 	112
-699 	Muut teollisuuden tuotantorakennukset 	Other industrial production buildings 	building 	industrial 	207 	122
-711 	Teollisuusvarastot 	Industrial warehouses 	building 	warehouse 	136 	113
-712 	Kauppavarastot 	Commercial warehouses 	building 	warehouse 	90 	70
-719 	Muut varastorakennukset 	Other warehouses 	building 	warehouse 	237 	160
-721 	Paloasemat 	Fire stations 	amenity 	fire_station 	6 	15
-722 	Väestönsuojat 	Civil defence shelters 	building 	bunker 	47 	107
-729 	Muut palo- ja pelastustoimen rakennukset 	Other fire fighting and rescue service buildings 	FIXME 	amenity=fire_station? 	3 	42
-811 	Navetat, sikalat, kanalat yms. 	Cowsheds, pighouses, hen-houses, etc. 	building 	cowshed 	46 	71
-811 			FIXME 	or building=sty? 		
-819 	Eläinsuojat, ravihevostallit, maneesit yms. 	Animal shelters, harness horse stables, maneges, etc. 	building 	stable 	16 	39
-819 			FIXME 	and leisure=horse_riding? or building=yes;leisure=pitch;sport=equestrian? 		
-891 	Viljankuivaamot ja viljan säilytysrakennukset 	Grain drying and storage buildings 	building 	barn 	40 	15
-891 			FIXME 	man_made=silo? 		
-892 	Kasvihuoneet 	Greenhouses 	building 	greenhouse 	32 	54
-893 	Turkistarhat 	Fur farms 	building 	fur_farm 	0 	0
-899 	Muut maa-, metsä- ja kalatalouden rakennukset 	Other buildings in agriculture, forestry and fishing 	building 	farm_auxiliary 	145 	178
-931 	Saunarakennukset 	Sauna buildings 	leisure 	sauna 	512 	1574
-931 			access 	private 		
-941 	Talousrakennukset 	Outbuildings 	building 	yes 	4080 	16071
-999 	Muualla luokittelemattomat rakennukset 	Buildings n.e.c. 	building 	yes 	280 	41 
+011 	Yhden asunnon talot 	One-dwelling houses 	building 	house 		17768 	20248 	12640
+011 			building:use 	residential 				
+012 	Kahden asunnon talot 	Two-dwelling houses 	building 	duplex 		4084 	6462 	6073
+012 			building:use 	residential 				
+013 	Muut erilliset pientalot 	Other detached and semi-detached houses 	building 	house 		93 	40 	424
+013 			building:use 	residential 				
+021 	Rivitalot 	Rowhouses 	building 	terrace 		3014 	3824 	4022
+021 			building:use 	residential 				
+022 	Ketjutalot 	Terraced houses 	building 	terrace 		73 	104 	57
+022 			building:use 	residential 				
+032 	Luhtitalot 	Balcony-access blocks 	building 	apartments 		105 	149 	318
+032 			building:use 	residential 				
+039 	Muut asuinkerrostalot 	Other blocks of flats 	building 	apartments 		2313 	2719 	9582
+039 			building:use 	residential 				
+041 	Vapaa-ajan asuinrakennukset 	Free-time residential buildings 	building 	cabin 		366 	1819 	337
+041 			building:use 	residential 				
+111 	Myymälähallit 	Shopping halls 	building 	retail 		19 	16 	18
+111 			building:use 	retail 				
+112 	Liike- ja tavaratalot, kauppakeskukset 	Shops, department stores and shopping centres 	building 	retail 		101 	124 	170
+112 			building:use 	retail 				
+112 			FIXME:classify 	Likely also either shop=shopping_centre ("kauppakeskus" - with covered and warm space) or shop=mall ("ostoskeskus"/"ostari" - without warms connection space, possibly covered though). 				
+119 	Muut myymälärakennukset 	Other wholesale and retail trade buildings 	building 	retail 		97 	158 	148
+119 			building:use 	retail 				
+121 	Hotellit yms. 	Hotels, etc. 	building 	hotel 		7 	17 	41
+121 			building:use 	accommodation 				
+121 			tourism 	hotel 	X 			
+121 			FIXME:classify 	or hostel/guest_house/spa/spa_resort? 				
+123 	Loma-, lepo- ja virkistyskodit 	Holiday, rest and recreation homes 	building 	hotel 		0 	4 	8
+123 			building:use 	accomodation 				
+123 			tourism 	hotel 	X 			
+123 			FIXME:classify 	hostel/guest_house? 				
+124 	Vuokrattavat lomamökit ja -osakkeet 	Rental holiday cottages and flats 	building 	yes 		0 	77 	20
+124 			building:use 	accomodation 				
+124 			tourism 	chalet 				
+124 			FIXME:classify 	tourism=apartment? 				
+129 	Muut majoitusliikerakennukset 	Other hotel buildings 	FIXME:classify 	tourism=hotel/hostel/guest_house? 		0 	7 	1
+129 			building 	yes 				
+131 	Asuntolat yms. 	Residences for communities, etc. 	building 	apartments 		15 	49 	103
+131 			building:use 	residential 				
+131 			amenity 	social_facility 	X 			
+131 			FIXME:classify 	or hotel ("asuntolahotelli") instead of social_facility (possible but unlikely)? social_facility:for=senior? 				
+139 	Muut asuntolarakennukset 	Other residential buildings for communities 	building 	residential 		10 	32 	31
+139 			building:use 	residential 				
+139 			FIXME:classify 	amenity=? 				
+141 	Ravintolat yms. 	Restaurants and other similar buildings 	FIXME:classify 	restaurant/fast_food/cafe/bar? 		16 	34 	94
+141 			building 	yes 				
+141 			building:use 	foodservice 				
+141 			amenity 	FIXME 				
+151 	Toimistorakennukset 	Office buildings 	building 	commercial 		206 	383 	896
+151 			building:use 	commercial 				
+161 	Rautatie- ja linja-autoasemat, lento- ja satamaterminaalit 	Rail and bus stations, air and harbour terminals 	building 	transportation 		13 	7 	27
+161 			building:use 	transportation 				
+161 			FIXME:classify 	or train_station? or amenity=bus_station? or aeroway=terminal? 				
+162 	Kulkuneuvojen suoja- ja huoltorakennukset 	Vehicle depots and service buildings 	FIXME:classify 	garage/depot/car_repair/car_inspection 		357 	446 	937
+163 	Pysäköintitalot 	Car parks 	amenity 	parking 		47 	123 	83
+163 			building:use 	parking 				
+163 			building 	yes 				
+163 			parking 	multi-storey (if it is a multistorey building...) 				
+164 	Tietoliikenteen rakennukset 	Communications buildings 	building 	utility 		14 	61 	25
+164 			building:use 	utility 				
+169 	Muut liikenteen rakennukset 	Other transport and communications buildings 	building 	transportation 		30 	8 	50
+169 			building:use 	transportation 				
+211 	Keskussairaalat 	General hospitals 	building 	hospital 		2 	0 	8
+211 			amenity 	hospital 	X 			
+211 			building:use 	medical 				
+213 	Muut sairaalat 	Other hospitals 	building 	hospital 		0 	11 	55
+213 			amenity 	hospital 	X 			
+213 			building:use 	medical 				
+214 	Terveyskeskukset 	Health centres 	building 	hospital 		4 	19 	29
+214 			amenity 	hospital 	X 			
+214 			building:use 	medical 				
+215 	Terveydenhuollon erityislaitokset 	Specialised health care buildings 	building 	hospital 		0 	4 	15
+215 			amenity 	hospital 	X 			
+215 			building:use 	medical 				
+219 	Muut terveydenhuoltorakennukset 	Other health care buildings 	building 	hospital 		8 	9 	27
+219 			amenity 	hospital 	X 			
+219 			building:use 	medical 				
+221 	Vanhainkodit 	Old-age homes 	amenity 	social_facility 	X 	11 	22 	52
+221 			building 	yes 				
+221 			building:use 	gathering 				
+221 			social_facility 	group_home 				
+221 			social_facility:for 	senior 				
+222 	Lasten- ja koulukodit 	Children's homes, reform schools 	amenity 	social_facility 	X 	10 	11 	25
+222 			building 	yes 				
+222 			building:use 	gathering 				
+222 			FIXME:classify 	social_facility:for=kids/juvenile? 				
+223 	Kehitysvammaisten hoitolaitokset 	Nursing homes for the mentally retarded 	amenity 	social_facility 	X 	5 	14 	5
+223 			building 	yes 				
+223 			building:use 	gathering 				
+223 			social_facility:for 	disabled 				
+229 	Muut huoltolaitosrakennukset 	Other social welfare buildings 	amenity 	social_facility 	X 	9 	7 	8
+229 			building 	yes 				
+229 			building:use 	gathering 				
+229 			FIXME:classify 	social_facility:for=? 				
+231 	Lasten päiväkodit 	Children's day care centres 	amenity 	kindergarten 	X 	116 	168 	286
+231 			building 	yes 				
+231 			building:use 	education 				
+239 	Muualla luokittelemattomat sosiaalitoimen rakennukset 	Social service buildings n.e.c. 	amenity 	social_facility 	X 	16 	47 	48
+239 			building 	yes 				
+239 			building:use 	gathering 				
+241 	Vankilat 	Prisons 	amenity 	prison 	X 	2 	0 	2
+241 			building 	yes 				
+241 			building:use 	prison 				
+311 	Teatterit, ooppera-, konsertti- ja kongressitalot 	Theatres, opera houses, concert halls and congress centres 	FIXME:classify 	amenity=theatre? theatre:genre:speech=yes? or theatre:genre:opera=yes? or amenity=conference_centre? or amenity=arts_centre? 		0 	3 	8
+311 			building 	yes 				
+311 			building:use 	cultural 				
+312 	Elokuvateatterit 	Cinema halls 	amenity 	cinema 	X 	0 	2 	3
+312 			building 	yes 				
+312 			building:use 	cultural 				
+322 	Kirjastot ja arkistot 	Libraries and archives 	building 	public 		3 	5 	25
+322 			building:use 	education 				
+322 			amenity 	library 				
+323 	Museot ja taidegalleriat 	Museums and art galleries 	tourism 	museum 	X 	6 	15 	49
+323 			building 	yes 				
+323 			building:use 	cultural 				
+323 			FIXME:classify 	or tourism=gallery? 				
+324 	Näyttelyhallit 	Exhibition halls 	amenity 	exhibition_centre 	X 	4 	1 	8
+324 			building 	yes 				
+324 			building:use 	exhibition 				
+331 	Seura- ja kerhorakennukset yms. 	Association and club buildings, etc. 	amenity 	social_facilty 	X 	21 	36 	55
+331 			building 	yes 				
+331 			building:use 	gathering 				
+331 			FIXME:classify 	"nuorisotalo" => social_facility:for=juvenile 				
+341 	Kirkot, kappelit, luostarit ja rukoushuoneet 	Churches, chapels, monasteries, convents and prayerhouses 	amenity 	place_of_worship 	X 	24 	28 	85
+341 			building:use 	religious 				
+341 			FIXME:classify 	building=chucrch/chapel/monastery/mosque/other place of worship? 				
+342 	Seurakuntatalot 	Parish halls 	amenity 	parish_hall 	X 	12 	17 	24
+342 			building 	yes 				
+342 			building:use 	religious 				
+349 	Muut uskonnollisten yhteisöjen rakennukset 	Other buildings of religious communities 	amenity 	place_of_worship 	X 	3 	4 	7
+349 			building 	yes 				
+349 			building:use 	religious 				
+351 	Jäähallit 	Indoor ice rinks 	building 	yes 		3 	8 	9
+351 			building:use 	sport 				
+351 			leisure 	sports_centre 	X 			
+351 			sport 	ice_skating 				
+352 	Uimahallit 	Indoor swimming pools 	building 	yes 		3 	4 	4
+352 			building:use 	sport 				
+352 			leisure 	sports_centre 	X 			
+352 			sport 	swimming 				
+353 	Tennis-, squash- ja sulkapallohallit 	Indoor tennis, squash and badminton courts 	building 	yes 		0 	2 	5
+353 			building:use 	sport 				
+353 			leisure 	sports_centre 	X 			
+353 			FIXME:classify 	sport=tennis/squash/badminton? 				
+354 	Monitoimihallit ja muut urheiluhallit 	Gymnasia and other sports halls 	building 	yes 		11 	28 	44
+354 			building:use 	sport 				
+354 			leisure 	sports_centre 	X 			
+359 	Muut urheilu- ja kuntoilurakennukset 	Other buildings for sports and physical exercise 	building 	yes 		24 	59 	59
+359 			building:use 	sport 				
+359 			leisure 	sports_centre 	X 			
+369 	Muut kokoontumisrakennukset 	Other assembly buildings 	building 	public 		44 	67 	95
+369 			building:use 	public 				
+369 			FIXME:classify 	leisure=? 				
+511 	Yleissivistävien oppilaitosten rakennukset 	General education buildings 	building 	school 		117 	163 	252
+511 			building:use 	education 				
+511 			amenity 	school 	X 			
+511 			FIXME:classify 	isced:level=? "ala-aste"=>1, "ylä-aste"=>2, "lukio"=>3 				
+521 	Ammatillisten oppilaitosten rakennukset 	Vocational education buildings 	building 	school 		15 	25 	59
+521 			building:use 	education 				
+521 			amenity 	school 	X 			
+521 			FIXME:classify 	isced:level=? "ammattikoulu"=>3, "erityisammattioppilaitos"=>4 				
+531 	Korkeakoulurakennukset 	University buildings 	building 	university 		1 	15 	49
+531 			building:use 	education 				
+531 			amenity 	university 	X 			
+531 			isced:level 	5 	X 			
+532 	Tutkimuslaitosrakennukset 	Research institute buildings 	FIXME:classify 	building=university? 		5 	38 	31
+532 			building:use 	research 				
+541 	Järjestöjen, liittojen, työnantajien yms. opetusrakennukset 	Educational buildings of organisations, unions, employers, etc. 	FIXME:classify 	amenity=? 		2 	1 	4
+541 			building 	yes 				
+541 			building:use 	education 				
+549 	Muualla luokittelemattomat opetusrakennukset 	Educational buildings n.e.c. 	FIXM:classify 	building=school? amenity=? 		0 	3 	14
+549 			building:use 	education 				
+611 	Voimalaitosrakennukset 	Power stations 	FIXME:classify 	power=? building=transformer_tower? 		46 	415 	122
+611 			building:use 	utility 				
+613 	Yhdyskuntatekniikan rakennukset 	Public utility buildings 	FIXME:classify 	building=utility? 		31 	109 	53
+613 			building:use 	utility 				
+691 	Teollisuushallit 	Manufacturing plants 	building 	industrial 		69 	65 	130
+691 			building:use 	industrial 				
+692 	Teollisuus- ja pienteollisuustalot 	Workshops for industry and small-scale industry 	building 	industrial 		175 	112 	144
+692 			building:use 	industrial 				
+699 	Muut teollisuuden tuotantorakennukset 	Other industrial production buildings 	building 	industrial 		207 	122 	413
+699 			building:use 	industrial 				
+711 	Teollisuusvarastot 	Industrial warehouses 	building 	warehouse 		136 	113 	172
+711 			building:use 	storage 				
+712 	Kauppavarastot 	Commercial warehouses 	building 	warehouse 		90 	70 	187
+712 			building:use 	storage 				
+719 	Muut varastorakennukset 	Other warehouses 	building 	warehouse 		237 	160 	277
+719 			building:use 	storage 				
+721 	Paloasemat 	Fire stations 	amenity 	fire_station 	X 	6 	15 	8
+721 			building 	yes 				
+721 			building:use 	civic 				
+722 	Väestönsuojat 	Civil defence shelters 	building 	shelter_entrance 		47 	107 	18
+721 			building:use 	shelter 				
+729 	Muut palo- ja pelastustoimen rakennukset 	Other fire fighting and rescue service buildings 	FIXME:classify 	amenity=fire_station? 		3 	42 	82
+729 			building 	yes 				
+811 	Navetat, sikalat, kanalat yms. 	Cowsheds, pighouses, hen-houses, etc. 	building 	cowshed 		46 	71 	10
+811 			building:use 	agricultural 				
+811 			FIXME:classify 	or building=sty? 				
+819 	Eläinsuojat, ravihevostallit, maneesit yms. 	Animal shelters, harness horse stables, maneges, etc. 	building 	stable 		16 	39 	22
+819 			building:use 	equestrian 				
+819 			FIXME:classify 	and leisure=horse_riding? or building=manege;leisure=pitch;sport=equestrian? 				
+891 	Viljankuivaamot ja viljan säilytysrakennukset 	Grain drying and storage buildings 	building 	barn 		40 	15 	6
+891 			building:use 	agricultural 				
+891 			FIXME:classify 	man_made=silo? 				
+892 	Kasvihuoneet 	Greenhouses 	building 	greenhouse 		32 	54 	15
+892 			building:use 	agricultural 				
+893 	Turkistarhat 	Fur farms 	building 	fur_farm 		0 	0 	0
+893 			building:use 	agricultural 				
+899 	Muut maa-, metsä- ja kalatalouden rakennukset 	Other buildings in agriculture, forestry and fishing 	building 	farm_auxiliary 		145 	178 	28
+899 			building:use 	agricultural 				
+931 	Saunarakennukset 	Sauna buildings 	leisure 	sauna 		512 	1574 	853
+931 			building 	yes 				
+931 			building:use 	sauna 				
+931 			access 	private 				
+941 	Talousrakennukset 	Outbuildings 	building 	yes 		4080 	16071 	4125
+999 	Muualla luokittelemattomat rakennukset 	Buildings n.e.c. 	building 	yes 		280 	41 	135
